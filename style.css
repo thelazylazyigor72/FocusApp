@@ -1,0 +1,448 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+.btn_add, .todo_list .task .controls .btn {
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+}
+
+.btn_gen_quote, .btn_done, .timer_form .btn_submit, .clock .clock_header .btn_back, .clock .clock_header .pause_or_stop .btn_stop, .clock .clock_controls .btn_start_focus, .clock .clock_controls .btn_start_rest {
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  border-radius: 0.8rem;
+}
+
+.quote_heading, .input_header {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1401px;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.quote_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid black;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.quote_heading {
+  margin-bottom: 2rem;
+}
+
+.quote {
+  margin-bottom: 1rem;
+}
+
+.btn_gen_quote {
+  background-color: #ad4747;
+}
+
+.todo_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid black;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.input_header {
+  margin-bottom: 2rem;
+}
+
+.input_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input_section input {
+  border: 1px solid #ad4747;
+  margin-right: 1rem;
+  border-radius: 0.3rem;
+  height: 1.5rem;
+}
+
+.input_section input::-webkit-input-placeholder {
+  font-size: 0.7rem;
+  color: #ad4747;
+  padding-left: 1rem;
+}
+
+.input_section input:-ms-input-placeholder {
+  font-size: 0.7rem;
+  color: #ad4747;
+  padding-left: 1rem;
+}
+
+.input_section input::-ms-input-placeholder {
+  font-size: 0.7rem;
+  color: #ad4747;
+  padding-left: 1rem;
+}
+
+.input_section input::placeholder {
+  font-size: 0.7rem;
+  color: #ad4747;
+  padding-left: 1rem;
+}
+
+.input_section input:focus {
+  border: 1px solid #eb2424;
+}
+
+.btn_add {
+  color: #993333;
+  font-size: 1.5rem;
+}
+
+.todo_list {
+  width: 100%;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 5px solid black;
+}
+
+.todo_list li {
+  width: 100%;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  border: 1px solid gray;
+  margin-bottom: 1rem;
+}
+
+.todo_list li:last-child {
+  margin-bottom: 0;
+}
+
+.todo_list .task {
+  color: red;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo_list .task .task_text {
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+}
+
+.todo_list .task .controls .btn {
+  margin-right: 0.5rem;
+  color: red;
+}
+
+.btn_check_show.task_text {
+  text-decoration: line-through;
+}
+
+.btn_done {
+  background-color: #ad4747;
+}
+
+.tld_wrapper {
+  max-height: 150px;
+  width: 100%;
+  overflow-y: auto;
+  scrollbar-gutter: var(--gutter, auto);
+}
+
+.todo_list_done {
+  width: 100%;
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo_list_done li {
+  width: 100%;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  border: 1px solid gray;
+  margin-bottom: 1rem;
+}
+
+.todo_list_done li:last-child {
+  margin-bottom: 0;
+}
+
+.timer_section {
+  position: relative;
+  margin: 0 auto;
+  height: 20rem;
+  width: 30rem;
+  background-color: #455b2e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.timer_form {
+  width: 100%;
+  -ms-flex-item-align: normal;
+      align-self: normal;
+  border: 1px solid black;
+  background-color: #f5b3b3;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.timer_form input {
+  width: 100%;
+  height: 2rem;
+  border-radius: 1rem;
+  padding-left: 1rem;
+  border: 1px solid red;
+  margin-bottom: 1rem;
+}
+
+.timer_form .btn_submit {
+  font-size: 1rem;
+  background: transparent;
+  border: 1px solid red;
+}
+
+.clock {
+  width: 100%;
+  -ms-flex-item-align: normal;
+      align-self: normal;
+  border: 1px solid black;
+  background-color: #f5b3b3;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+.clock .clock_header {
+  width: 100%;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clock .clock_header .pause_or_stop {
+  /* to hide the checkbox itself */
+  /* unchecked icon */
+  /* space between checkbox and label */
+  /* checked icon */
+  /* allow space for check mark */
+}
+
+.clock .clock_header .pause_or_stop .btn_stop {
+  font-size: 1rem;
+  background: transparent;
+  border: 1px solid red;
+}
+
+.clock .clock_header .pause_or_stop input[type=checkbox] {
+  display: none;
+}
+
+.clock .clock_header .pause_or_stop input[type=checkbox] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+}
+
+.clock .clock_header .pause_or_stop input[type=checkbox] + label:before {
+  content: "\f28b";
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.clock .clock_header .pause_or_stop input[type=checkbox] + label:before {
+  letter-spacing: 10px;
+}
+
+.clock .clock_header .pause_or_stop input[type=checkbox]:checked + label:before {
+  content: "\f28b";
+  color: red;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.clock .time_container {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.clock .clock_controls {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clock .clock_controls .btn_start_focus, .clock .clock_controls .btn_start_rest {
+  font-size: 1rem;
+  background: transparent;
+  border: 1px solid red;
+}
+/*# sourceMappingURL=style.css.map */

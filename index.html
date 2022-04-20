@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!--!MY UNIQUE FONTAWESOME CODE TO USE IN PROJECTS-->
+    <script src="https://kit.fontawesome.com/a039c12fd1.js" crossorigin="anonymous"></script>
+    <title>FocusApp</title>
+</head>
+<body>
+    <div class="container">
+
+        <!--!Quotes Section-->
+
+        <div class="quote_section">
+            <h1 class="quote_heading">
+                Quote to motivate ya!
+            </h1>
+            <p class="quote">
+                Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Voluptas molestias error ipsam aspernatur 
+                est vel maxime quam, dicta voluptatum temporibus?
+            </p>
+            <h6 class="author"></h6>
+            <button class="btn_ni btn_gen_quote">
+                New saying
+            </button>
+        </div>
+
+        <!--!To!DoSection-->
+
+        <div class="todo_section">
+            <div class="input_header">Type task right here: </div>
+            <label class="input_section" for="doings">
+                <input type="text" placeholder="work it" id="input">
+                <button class="btn btn_add">
+                    <i class="fas fa-check"></i>
+                </button>
+            </label>
+            <ul class="todo_list">
+                <!--    
+                <li>
+                    <p class="task">${inp}</p>
+                    <div class="controls">
+                        <button class="btn btn_check">
+                            <i class="fas fa-check"></i>
+                        </button>
+                        <button class="btn btn_times">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </li>
+                -->
+            </ul>
+            <div class="tld_wrapper">
+                <div class="done_header">
+                    <h4>Done tasks:</h4>
+                    <button class="btn_clear_done">
+                        clear
+                    </button>
+                </div>
+                <ul class="todo_list_done">
+                
+                </ul>
+            </div>
+            <button class="btn_ni btn_done">
+                What I've done ?
+            </button>
+        </div>
+
+        <!--!TimerSection-->
+
+        <div class="timer_section">
+            <div class="timer_form">
+                <input id="focusTime" type="number" min="10" max="60" placeholder="..length of focusing time">
+                <input id="restTime" type="number" min="10" max="60" placeholder="..length of resting time">
+                <button class="btn_submit">
+                    submit
+                </button>
+            </div>
+            <div class="clock">
+                <div class="clock_header">
+                    <button class="btn_back">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <div class="pause_or_stop">
+                        <input id="pause_switcher" type="checkbox" />
+                        <label for="pause_switcher"></label>
+                        <button class="btn_stop">
+                            <i class="fas fa-stop"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="time_container">
+                    00:00
+                </div>
+                <div class="clock_controls">
+                    <button data-id="focusSession" class="btn_start_focus">
+                        Get Focused
+                    </button>
+                    <button data-id="restSession" class="btn_start_rest">
+                        Get Relaxed
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./quote.js"></script>
+    <script src="./todo.js"></script>
+    <script src="./timer.js"></script>
+</body>
+</html>
