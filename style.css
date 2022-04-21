@@ -8,20 +8,26 @@
   text-decoration: none;
 }
 
-.btn_add, .todo_list .task .controls .btn {
+.todo_inputs .btn_add, .ul_wrapper .todo_list .task .controls .btn, .ul_wrapper .todo_list_done .task .controls .btn {
   cursor: pointer;
   background: transparent;
   border-color: transparent;
 }
 
-.btn_gen_quote, .btn_done, .timer_form .btn_submit, .clock .clock_header .btn_back, .clock .clock_header .pause_or_stop .btn_stop, .clock .clock_controls .btn_start_focus, .clock .clock_controls .btn_start_rest {
+.btn_gen_quote, .tld_wrapper .done_header .btn_clear_done, .timer_form .btn_submit, .clock .clock_header .btn_back, .clock .clock_header .pause_or_stop .btn_stop, .clock .clock_controls .btn_start_focus, .clock .clock_controls .btn_start_rest {
   cursor: pointer;
   padding: 0.5rem 2rem;
   border-radius: 0.8rem;
 }
 
-.quote_heading, .input_header {
-  font-size: 2rem;
+body {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.quote_heading, .todo_header {
+  font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -29,6 +35,17 @@
 .container {
   width: 100%;
   margin: 0 auto;
+}
+
+.quote_section, .todo_section, .timer_section {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 16px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.2px);
+  -webkit-backdrop-filter: blur(5.2px);
+  border: 1px solid rgba(255, 255, 255, 0.11);
 }
 
 .container {
@@ -40,6 +57,7 @@ html {
 }
 
 body {
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,9 +71,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #B9FFC8;
+  background-color: #004C4C;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Ccircle stroke='%23B2D8D8' vector-effect='non-scaling-stroke' id='a' fill='none' stroke-width='1' r='315'/%3E%3Cuse id='f' href='%23a' stroke-dasharray='100 100 100 9999'/%3E%3Cuse id='b' href='%23a' stroke-dasharray='250 250 250 250 250 9999'/%3E%3Cuse id='e' href='%23a' stroke-dasharray='1000 500 1000 500 9999'/%3E%3Cuse id='g' href='%23a' stroke-dasharray='1500 9999'/%3E%3Cuse id='h' href='%23a' stroke-dasharray='2000 500 500 9999'/%3E%3Cuse id='j' href='%23a' stroke-dasharray='800 800 800 800 800 9999'/%3E%3Cuse id='k' href='%23a' stroke-dasharray='1200 1200 1200 1200 1200 9999'/%3E%3Cuse id='l' href='%23a' stroke-dasharray='1600 1600 1600 1600 1600 9999'/%3E%3C/defs%3E%3Cg transform='translate(1000 750)' %3E%3Cg transform='rotate(72 0 0)' %3E%3Ccircle fill='%23B2D8D8' r='10'/%3E%3Cg transform='rotate(-177 0 0)'%3E%3Cuse href='%23f' transform='scale(.1) rotate(50 0 0)' /%3E%3Cuse href='%23f' transform='scale(.2) rotate(100 0 0)' /%3E%3Cuse href='%23f' transform='scale(.3) rotate(150 0 0)' /%3E%3C/g%3E%3Cg transform='rotate(-21 0 0)'%3E%3Cuse href='%23b' transform='scale(.4) rotate(200 0 0)' /%3E%3Cuse href='%23z' transform='scale(.5) rotate(250 0 0)' /%3E%3C/g%3E%3Cg id='z' transform='rotate(79.65 0 0)'%3E%3Cg transform='rotate(45 0 0)'%3E%3Cuse href='%23b'/%3E%3Cuse href='%23b' transform='scale(1.2) rotate(90 0 0)' /%3E%3Cuse href='%23b' transform='scale(1.4) rotate(60 0 0)' /%3E%3Cuse href='%23e' transform='scale(1.6) rotate(120 0 0)' /%3E%3Cuse href='%23e' transform='scale(1.8) rotate(30 0 0)' /%3E%3C/g%3E%3C/g%3E%3Cg id='y' transform='rotate(94.5 0 0)'%3E%3Cg transform='rotate(27 0 0)'%3E%3Cuse href='%23e' transform='scale(1.1) rotate(20 0 0)' /%3E%3Cuse href='%23g' transform='scale(1.3) rotate(-40 0 0)' /%3E%3Cuse href='%23g' transform='scale(1.5) rotate(60 0 0)' /%3E%3Cuse href='%23h' transform='scale(1.7) rotate(-80 0 0)' /%3E%3Cuse href='%23j' transform='scale(1.9) rotate(100 0 0)' /%3E%3C/g%3E%3C/g%3E%3Cg transform='rotate(-54 0 0)'%3E%3Cg transform='rotate(-79.65 0 0)'%3E%3Cg transform='rotate(-126 0 0)'%3E%3Cuse href='%23h' transform='scale(2) rotate(60 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.1) rotate(120 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.3) rotate(180 0 0)'/%3E%3Cuse href='%23h' transform='scale(2.4) rotate(240 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.5) rotate(300 0 0)'/%3E%3C/g%3E%3Cuse href='%23y' transform='scale(2) rotate(180 0 0)' /%3E%3Cuse href='%23j' transform='scale(2.7)'/%3E%3Cuse href='%23j' transform='scale(2.8) rotate(45 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.9) rotate(90 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.1) rotate(135 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.2) rotate(180 0 0)'/%3E%3C/g%3E%3Cuse href='%23k' transform='scale(3.3) rotate(225 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.5) rotate(270 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.6) rotate(315 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.7)'/%3E%3Cuse href='%23k' transform='scale(3.9) rotate(75 0 0)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .quote_section {
+  position: absolute;
+  bottom: 5%;
+  right: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,20 +93,22 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 2px solid black;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  height: 15rem;
+  width: 25rem;
   padding: 1rem;
   margin: 0 auto;
+  color: white;
 }
 
 .quote_heading {
   margin-bottom: 2rem;
 }
 
-.quote {
+.quote, .quote_author {
   margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .btn_gen_quote {
@@ -90,6 +116,9 @@ body {
 }
 
 .todo_section {
+  position: absolute;
+  top: 5%;
+  left: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,109 +132,21 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 30rem;
+  width: 25rem;
   border: 2px solid black;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   padding: 1rem;
   margin: 0 auto;
+  -ms-flex-item-align: normal;
+      align-self: normal;
 }
 
-.input_header {
+.todo_header {
   margin-bottom: 2rem;
 }
 
-.input_section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.input_section input {
-  border: 1px solid #ad4747;
-  margin-right: 1rem;
-  border-radius: 0.3rem;
-  height: 1.5rem;
-}
-
-.input_section input::-webkit-input-placeholder {
-  font-size: 0.7rem;
-  color: #ad4747;
-  padding-left: 1rem;
-}
-
-.input_section input:-ms-input-placeholder {
-  font-size: 0.7rem;
-  color: #ad4747;
-  padding-left: 1rem;
-}
-
-.input_section input::-ms-input-placeholder {
-  font-size: 0.7rem;
-  color: #ad4747;
-  padding-left: 1rem;
-}
-
-.input_section input::placeholder {
-  font-size: 0.7rem;
-  color: #ad4747;
-  padding-left: 1rem;
-}
-
-.input_section input:focus {
-  border: 1px solid #eb2424;
-}
-
-.btn_add {
-  color: #993333;
-  font-size: 1.5rem;
-}
-
-.todo_list {
-  width: 100%;
-  margin: 1rem 0;
-  padding-bottom: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-bottom: 5px solid black;
-}
-
-.todo_list li {
-  width: 100%;
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
-  border: 1px solid gray;
+.todo_inputs {
   margin-bottom: 1rem;
-}
-
-.todo_list li:last-child {
-  margin-bottom: 0;
-}
-
-.todo_list .task {
-  color: red;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -222,33 +163,55 @@ body {
           align-items: center;
 }
 
-.todo_list .task .task_text {
-  -webkit-transition: 1s ease-in;
-  transition: 1s ease-in;
+.todo_inputs input {
+  padding-left: 1.5rem;
+  border: 1px solid #ad4747;
+  margin-right: 1rem;
+  border-radius: 0.7rem;
+  height: 1.5rem;
+  width: 90%;
 }
 
-.todo_list .task .controls .btn {
-  margin-right: 0.5rem;
-  color: red;
+.todo_inputs input::-webkit-input-placeholder {
+  font-size: 0.7rem;
+  color: #ad4747;
 }
 
-.btn_check_show.task_text {
-  text-decoration: line-through;
+.todo_inputs input:-ms-input-placeholder {
+  font-size: 0.7rem;
+  color: #ad4747;
 }
 
-.btn_done {
-  background-color: #ad4747;
+.todo_inputs input::-ms-input-placeholder {
+  font-size: 0.7rem;
+  color: #ad4747;
 }
 
-.tld_wrapper {
-  max-height: 150px;
+.todo_inputs input::placeholder {
+  font-size: 0.7rem;
+  color: #ad4747;
+}
+
+.todo_inputs input:focus {
+  border: 1px solid #eb2424;
+}
+
+.todo_inputs .btn_add {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.ul_wrapper {
+  max-height: 5rem;
   width: 100%;
   overflow-y: auto;
   scrollbar-gutter: var(--gutter, auto);
 }
 
-.todo_list_done {
+.ul_wrapper .todo_list, .ul_wrapper .todo_list_done {
+  border: 1px solid red;
   width: 100%;
+  height: 5rem;
   margin: 1rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -265,25 +228,85 @@ body {
           align-items: center;
 }
 
-.todo_list_done li {
+.ul_wrapper .todo_list .task, .ul_wrapper .todo_list_done .task {
+  color: white;
   width: 100%;
   -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
       align-self: start;
-  border: 1px solid gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid gray;
   margin-bottom: 1rem;
 }
 
-.todo_list_done li:last-child {
+.ul_wrapper .todo_list .task:last-child, .ul_wrapper .todo_list_done .task:last-child {
   margin-bottom: 0;
 }
 
+.ul_wrapper .todo_list .task .task_text, .ul_wrapper .todo_list_done .task .task_text {
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+  text-transform: capitalize;
+}
+
+.ul_wrapper .todo_list .task .controls .btn, .ul_wrapper .todo_list_done .task .controls .btn {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  color: white;
+}
+
+/*/.btn_check_show.task_text {
+    text-decoration: line-through;
+    color: red;
+}*/
+.tld_wrapper {
+  padding-top: 1rem;
+  border-top: 5px solid black;
+  max-height: 10rem;
+  width: 100%;
+}
+
+.tld_wrapper .done_header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.tld_wrapper .task_text_done {
+  text-transform: capitalize;
+  text-decoration: line-through;
+}
+
 .timer_section {
-  position: relative;
+  position: absolute;
+  top: 7%;
+  right: 7%;
   margin: 0 auto;
-  height: 20rem;
-  width: 30rem;
-  background-color: #455b2e;
+  height: 15rem;
+  width: 25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,8 +326,6 @@ body {
   width: 100%;
   -ms-flex-item-align: normal;
       align-self: normal;
-  border: 1px solid black;
-  background-color: #f5b3b3;
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -340,8 +361,6 @@ body {
   width: 100%;
   -ms-flex-item-align: normal;
       align-self: normal;
-  border: 1px solid black;
-  background-color: #f5b3b3;
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -419,7 +438,7 @@ body {
 
 .clock .time_container {
   font-size: 2rem;
-  color: black;
+  color: white;
   margin-bottom: 2rem;
 }
 

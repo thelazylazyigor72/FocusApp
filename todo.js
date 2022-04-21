@@ -98,7 +98,7 @@ const populateDoneTask = input => {
     taskNode.classList.add('task')
     taskNode.dataset.key = counterNegative()
     const skeleton = `                
-        <p class="task_text">${input}</p>
+        <p class="task_text_done">${input}</p>
         <div class="controls">
         <button class="btn btn_check">
             <i class="fas fa-check"></i>
@@ -189,7 +189,7 @@ const repopulateDoneTasks = () => {
         taskNodeRe.classList.add('task')
         taskNodeRe.dataset.key = store[i]
         const skeleton = `                
-        <p class="task_text">${value}</p>
+        <p class="task_text_done">${value}</p>
         <div class="controls">
             <button class="btn btn_check">
             <i class="fas fa-check"></i>
@@ -246,6 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
     repopulateDoneTasks()
 })
 
+//!Delete done tasks
 clearDoneTasks.addEventListener('click', () => {
     //!Clear only there's no active tasks
     let store = Object.keys(localStorage)

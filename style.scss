@@ -1,8 +1,17 @@
-//Preps 4 work
+//!Preps 4 work
 @import './resetStyles.scss';
 @import './patterns.scss';
-//Variables
-
+//!Variables
+//!LocalPatterns
+%glassmorhism {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.2px);
+    -webkit-backdrop-filter: blur(5.2px);
+    border: 1px solid rgba(255, 255, 255, 0.11);
+}
 
 
 .container {
@@ -14,26 +23,41 @@ html {
     font-size: 18px;
 }
 body {
+    height: 100vh;
     @include flexbase(row,center,center);
+    background-color: #B9FFC8;
+    background-color: #004C4C;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Ccircle stroke='%23B2D8D8' vector-effect='non-scaling-stroke' id='a' fill='none' stroke-width='1' r='315'/%3E%3Cuse id='f' href='%23a' stroke-dasharray='100 100 100 9999'/%3E%3Cuse id='b' href='%23a' stroke-dasharray='250 250 250 250 250 9999'/%3E%3Cuse id='e' href='%23a' stroke-dasharray='1000 500 1000 500 9999'/%3E%3Cuse id='g' href='%23a' stroke-dasharray='1500 9999'/%3E%3Cuse id='h' href='%23a' stroke-dasharray='2000 500 500 9999'/%3E%3Cuse id='j' href='%23a' stroke-dasharray='800 800 800 800 800 9999'/%3E%3Cuse id='k' href='%23a' stroke-dasharray='1200 1200 1200 1200 1200 9999'/%3E%3Cuse id='l' href='%23a' stroke-dasharray='1600 1600 1600 1600 1600 9999'/%3E%3C/defs%3E%3Cg transform='translate(1000 750)' %3E%3Cg transform='rotate(72 0 0)' %3E%3Ccircle fill='%23B2D8D8' r='10'/%3E%3Cg transform='rotate(-177 0 0)'%3E%3Cuse href='%23f' transform='scale(.1) rotate(50 0 0)' /%3E%3Cuse href='%23f' transform='scale(.2) rotate(100 0 0)' /%3E%3Cuse href='%23f' transform='scale(.3) rotate(150 0 0)' /%3E%3C/g%3E%3Cg transform='rotate(-21 0 0)'%3E%3Cuse href='%23b' transform='scale(.4) rotate(200 0 0)' /%3E%3Cuse href='%23z' transform='scale(.5) rotate(250 0 0)' /%3E%3C/g%3E%3Cg id='z' transform='rotate(79.65 0 0)'%3E%3Cg transform='rotate(45 0 0)'%3E%3Cuse href='%23b'/%3E%3Cuse href='%23b' transform='scale(1.2) rotate(90 0 0)' /%3E%3Cuse href='%23b' transform='scale(1.4) rotate(60 0 0)' /%3E%3Cuse href='%23e' transform='scale(1.6) rotate(120 0 0)' /%3E%3Cuse href='%23e' transform='scale(1.8) rotate(30 0 0)' /%3E%3C/g%3E%3C/g%3E%3Cg id='y' transform='rotate(94.5 0 0)'%3E%3Cg transform='rotate(27 0 0)'%3E%3Cuse href='%23e' transform='scale(1.1) rotate(20 0 0)' /%3E%3Cuse href='%23g' transform='scale(1.3) rotate(-40 0 0)' /%3E%3Cuse href='%23g' transform='scale(1.5) rotate(60 0 0)' /%3E%3Cuse href='%23h' transform='scale(1.7) rotate(-80 0 0)' /%3E%3Cuse href='%23j' transform='scale(1.9) rotate(100 0 0)' /%3E%3C/g%3E%3C/g%3E%3Cg transform='rotate(-54 0 0)'%3E%3Cg transform='rotate(-79.65 0 0)'%3E%3Cg transform='rotate(-126 0 0)'%3E%3Cuse href='%23h' transform='scale(2) rotate(60 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.1) rotate(120 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.3) rotate(180 0 0)'/%3E%3Cuse href='%23h' transform='scale(2.4) rotate(240 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.5) rotate(300 0 0)'/%3E%3C/g%3E%3Cuse href='%23y' transform='scale(2) rotate(180 0 0)' /%3E%3Cuse href='%23j' transform='scale(2.7)'/%3E%3Cuse href='%23j' transform='scale(2.8) rotate(45 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.9) rotate(90 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.1) rotate(135 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.2) rotate(180 0 0)'/%3E%3C/g%3E%3Cuse href='%23k' transform='scale(3.3) rotate(225 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.5) rotate(270 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.6) rotate(315 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.7)'/%3E%3Cuse href='%23k' transform='scale(3.9) rotate(75 0 0)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    //background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Ccircle stroke='%23E94E77' vector-effect='non-scaling-stroke' id='a' fill='none' stroke-width='1' r='315'/%3E%3Cuse id='f' href='%23a' stroke-dasharray='100 100 100 9999'/%3E%3Cuse id='b' href='%23a' stroke-dasharray='250 250 250 250 250 9999'/%3E%3Cuse id='e' href='%23a' stroke-dasharray='1000 500 1000 500 9999'/%3E%3Cuse id='g' href='%23a' stroke-dasharray='1500 9999'/%3E%3Cuse id='h' href='%23a' stroke-dasharray='2000 500 500 9999'/%3E%3Cuse id='j' href='%23a' stroke-dasharray='800 800 800 800 800 9999'/%3E%3Cuse id='k' href='%23a' stroke-dasharray='1200 1200 1200 1200 1200 9999'/%3E%3Cuse id='l' href='%23a' stroke-dasharray='1600 1600 1600 1600 1600 9999'/%3E%3C/defs%3E%3Cg transform='translate(1000 750)' %3E%3Cg transform='rotate(291.6 0 0)' %3E%3Ccircle fill='%23E94E77' r='10'/%3E%3Cg transform='rotate(-180 0 0)'%3E%3Cuse href='%23f' transform='scale(.1) rotate(50 0 0)' /%3E%3Cuse href='%23f' transform='scale(.2) rotate(100 0 0)' /%3E%3Cuse href='%23f' transform='scale(.3) rotate(150 0 0)' /%3E%3C/g%3E%3Cg transform='rotate(-43.2 0 0)'%3E%3Cuse href='%23b' transform='scale(.4) rotate(200 0 0)' /%3E%3Cuse href='%23z' transform='scale(.5) rotate(250 0 0)' /%3E%3C/g%3E%3Cg id='z' transform='rotate(81 0 0)'%3E%3Cg transform='rotate(182.25 0 0)'%3E%3Cuse href='%23b'/%3E%3Cuse href='%23b' transform='scale(1.2) rotate(90 0 0)' /%3E%3Cuse href='%23b' transform='scale(1.4) rotate(60 0 0)' /%3E%3Cuse href='%23e' transform='scale(1.6) rotate(120 0 0)' /%3E%3Cuse href='%23e' transform='scale(1.8) rotate(30 0 0)' /%3E%3C/g%3E%3C/g%3E%3Cg id='y' transform='rotate(194.4 0 0)'%3E%3Cg transform='rotate(109.35 0 0)'%3E%3Cuse href='%23e' transform='scale(1.1) rotate(20 0 0)' /%3E%3Cuse href='%23g' transform='scale(1.3) rotate(-40 0 0)' /%3E%3Cuse href='%23g' transform='scale(1.5) rotate(60 0 0)' /%3E%3Cuse href='%23h' transform='scale(1.7) rotate(-80 0 0)' /%3E%3Cuse href='%23j' transform='scale(1.9) rotate(100 0 0)' /%3E%3C/g%3E%3C/g%3E%3Cg transform='rotate(-218.7 0 0)'%3E%3Cg transform='rotate(-81 0 0)'%3E%3Cg transform='rotate(-259.2 0 0)'%3E%3Cuse href='%23h' transform='scale(2) rotate(60 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.1) rotate(120 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.3) rotate(180 0 0)'/%3E%3Cuse href='%23h' transform='scale(2.4) rotate(240 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.5) rotate(300 0 0)'/%3E%3C/g%3E%3Cuse href='%23y' transform='scale(2) rotate(180 0 0)' /%3E%3Cuse href='%23j' transform='scale(2.7)'/%3E%3Cuse href='%23j' transform='scale(2.8) rotate(45 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.9) rotate(90 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.1) rotate(135 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.2) rotate(180 0 0)'/%3E%3C/g%3E%3Cuse href='%23k' transform='scale(3.3) rotate(225 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.5) rotate(270 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.6) rotate(315 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.7)'/%3E%3Cuse href='%23k' transform='scale(3.9) rotate(75 0 0)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    @extend%backgroundImage;
+
 }
+//!--------------------------------------------------------
 
 
 
-
-
+//!quote_section
 .quote_section {
+    position: absolute;
+    bottom: 5%;
+    right: 25%;
+    @extend%glassmorhism;
     @include flexbase(column,center,center);
-    border: 2px solid black;
-    width: fit-content;
+    height: 15rem;
+    width: 25rem;
     padding: 1rem;
     margin: 0 auto;
+    color: white;
 }
 .quote_heading {
     @extend%heading;
     margin-bottom: 2rem;
 }
-.quote {
+.quote, .quote_author {
     margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
 }
 .btn_gen_quote {
     @extend%btn_ni;
@@ -44,116 +68,121 @@ body {
 
 //-----------------------------------------------------
 .todo_section {
+    position: absolute;
+    top: 5%;
+    left: 5%;
     @include flexbase(column,center,center);
+    @extend%glassmorhism;
+    height: 30rem;
+    width: 25rem;
     border: 2px solid black;
-    width: fit-content;
     padding: 1rem;
     margin: 0 auto;
+    align-self: normal;
 }
-.input_header {
+.todo_header {
     @extend%heading;
     margin-bottom: 2rem;
 }
-.input_section {
-    @include flexbase(row,center,center);
+.todo_inputs {
+    margin-bottom: 1rem;
+    width: 100%;
+    @include flexbase(row,space-between,center);
     input {
+        padding-left: 1.5rem;
         border: 1px solid rgb(173, 71, 71);
         margin-right: 1rem;
-        border-radius: 0.3rem;
+        border-radius: 0.7rem;
         height: 1.5rem;
+        width: 90%;
         &::placeholder {
             font-size: 0.7rem;
             color: rgb(173, 71, 71);
-            padding-left: 1rem;
         }
         &:focus {
             border: 1px solid rgb(235, 36, 36);
         }
     }
-}
-.btn_add {
-    @extend%btn;
-    color: rgb(153, 51, 51);
-    font-size: 1.5rem;
-}
-.todo_list {
-    width: 100%;
-    margin: 1rem 0;
-    padding-bottom: 1rem;
-    //border: 1px solid blue;
-    @include flexbase(column,center,center);
-    li {
-        width: 100%;
-        align-self: start;
-        border: 1px solid gray;
-        margin-bottom: 1rem;
-        &:last-child {
-            margin-bottom: 0;
-        }
-        
-    }
-    border-bottom: 5px solid black;
-    .task {
-        color: red;
-        width: 100%;
-        @include flexbase(row,space-between,center);
-        .task_text {
-            transition: 1s ease-in;
-        }
-        .controls .btn {
-            margin-right: 0.5rem;
-            @extend%btn;
-            color: red;
-        }
+    .btn_add {
+        @extend%btn;
+        color: rgb(255, 255, 255);
+        font-size: 1.5rem;
     }
 }
-.btn_check_show.task_text {
-    text-decoration: line-through;
-}
-.btn_done {
-    @extend%btn_ni;
-    background-color: rgb(173, 71, 71);
-}
-.tld_wrapper {
-    max-height: 150px;
+.ul_wrapper {
+    max-height: 5rem;
     width: 100%;
     overflow-y: auto;
     scrollbar-gutter: var(--gutter, auto);
-}
-.todo_list_done {
-    width: 100%;
-    margin: 1rem 0;
-    //border: 1px solid blue;
-    @include flexbase(column,center,center);
-    li {
+    .todo_list, .todo_list_done {
+        border: 1px solid red;
+        //overflow-y: scroll;
         width: 100%;
-        align-self: start;
-        border: 1px solid gray;
-        margin-bottom: 1rem;
-        &:last-child {
-            margin-bottom: 0;
+        height: 5rem;
+        margin: 1rem 0;
+        //border: 1px solid blue;
+        @include flexbase(column,center,center);
+        .task {
+            color: rgb(255, 255, 255);
+            width: 100%;
+            align-self: start;
+            @include flexbase(row,space-between,center);
+            border-bottom: 1px solid gray;
+            margin-bottom: 1rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .task_text {
+                transition: 1s ease-in;
+                text-transform: capitalize;
+            }
+            .controls .btn {
+                margin-right: 0.5rem;
+                @extend%btn;
+                font-size: 1rem;
+                color: white;
+            }
         }
-        
+    }
+}
+/*/.btn_check_show.task_text {
+    text-decoration: line-through;
+    color: red;
+}*/
+.tld_wrapper {
+    padding-top: 1rem;
+    border-top: 5px solid black;
+    max-height: 10rem;
+    width: 100%;
+    .done_header {
+        width: 100%;
+        @include flexbase(row,space-between,center);
+        .btn_clear_done {
+            @extend%btn_ni;
+        }
+        margin-bottom: 1rem;
+    }
+    .task_text_done {
+        text-transform: capitalize;
+        text-decoration: line-through;
     }
 }
 
-
 //-------------------------------------------------------------------------------------------
 
-
 .timer_section {
-    position: relative;
+    position: absolute;
+    top: 7%;
+    right: 7%;
+    @extend%glassmorhism;
     margin: 0 auto;
-    height: 20rem;
-    width: 30rem;
-    background-color: rgb(69, 91, 46);
+    height: 15rem;
+    width: 25rem;
     @include flexbase(row,center,center);
 }
 .timer_form {
     width: 100%;
     align-self: normal;
-    border: 1px solid black;
-    background-color: rgb(245, 179, 179);
     padding: 1rem;
     @include flexbase(column,center,center);
     //display: none;
@@ -175,8 +204,6 @@ body {
 .clock {
     width: 100%;
     align-self: normal;
-    border: 1px solid black;
-    background-color: rgb(245, 179, 179);
     padding: 1rem;
     @include flexbase(column,center,center);
     display: none;
@@ -211,7 +238,7 @@ body {
     }
     .time_container {
         font-size: 2rem;
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
         margin-bottom: 2rem;
     }
     .clock_controls {

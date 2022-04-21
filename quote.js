@@ -1,17 +1,17 @@
 //!DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
     //loading quote when page load
-    generateQuote(quoteURL)
-  })
-  
+    //generateQuote(quoteURL)
+})
+
 //!QUOTE GENERATING
 //get container for quote
 const quoteContainer = document.querySelector('.quote')
 //get container for author
-const authorContainer = document.querySelector('.author')
+const authorContainer = document.querySelector('.quote_author')
 //get btn dat will generate new quote
 const quoteGenerate = document.querySelector('.btn_gen_quote')
-  
+
 //generating quote by clicking
 quoteGenerate.addEventListener('click', () => {
     generateQuote(quoteURL)

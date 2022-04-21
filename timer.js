@@ -14,7 +14,8 @@ const pauseSwitcher = document.querySelector('#pause_switcher')
 const clockDiv = document.querySelector('.clock')
 //!get go back button
 const goBack = document.querySelector('.btn_back')
-
+//!get timerForm
+const timerForm = document.querySelector('.timer_form')
 //!get start session button
 const startFocus = document.querySelector('.btn_start_focus')
 //!get start break button
@@ -37,7 +38,7 @@ let focusSession;
 //!variable to store rest session
 let restSession;
 //!variable to store object w/ vars needed to reload
-let obj = {}
+let obj = {};
 //!variable to store data id
 let dataId;
 //!variable to store how many seconds pause was
@@ -46,8 +47,6 @@ let secondsOfPause = 0;
 let pauseInterval;
 
 //? EVENTS-----------------------------------------------------------------------------------------------
-//get timerForm
-const timerForm = document.querySelector('.timer_form')
 
 //!goback button
 goBack.addEventListener('click', () => {
