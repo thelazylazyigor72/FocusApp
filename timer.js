@@ -11,7 +11,7 @@ const submit = document.querySelector('.btn_submit')
 //!get pause switcher 
 const pauseSwitcher = document.querySelector('#pause_switcher')
 //!get whole clock div
-const clockDiv = document.querySelector('.clock')
+const clockDiv = document.querySelector('.timer')
 //!get go back button
 const goBack = document.querySelector('.btn_back')
 //!get timerForm

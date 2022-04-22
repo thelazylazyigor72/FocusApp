@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!--!MY UNIQUE FONTAWESOME CODE TO USE IN PROJECTS-->
+    <!--!FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Press+Start+2P&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+        <!--!MY UNIQUE FONTAWESOME CODE TO USE IN PROJECTS-->
     <script src="https://kit.fontawesome.com/a039c12fd1.js" crossorigin="anonymous"></script>
     <title>FocusApp</title>
 </head>
@@ -25,50 +29,51 @@
             </p>
             <h6 class="quote_author"></h6>
             <button class="btn_gen_quote">
-                New saying
+                new quote
             </button>
         </div>
 
         <!--!To!DoSection-->
 
         <div class="todo_section">
-            <div class="todo_header">Type task right here: </div>
-            <label class="todo_inputs" for="doings">
-                <input type="text" placeholder="work it" id="input">
-                <button class="btn btn_add">
-                    <i class="fas fa-check"></i>
-                </button>
-            </label>
+            <div class="todo_header">ToDo List</div>
             <div class="ul_wrapper">
-                <ul class="todo_list">
-                    <!--    
-                    <li class=task>
-                        <p class="task_text">${inp}</p>
-                        <div class="controls">
-                            <button class="btn btn_check">
-                                <i class="fas fa-check"></i>
-                            </button>
-                            <button class="btn btn_times">
-                                <i class="fas fa-times"></i>
-                            </button>
-                        </div>
-                    </li>
-                    -->
-                </ul>
-            </div>
-            <div class="tld_wrapper">
-                <div class="done_header">
-                    <h4>Done tasks:</h4>
-                    <button class="btn_clear_done">
-                        clear
+                <label class="todo_inputs" for="doings">
+                    <input type="text" placeholder="add task" id="input">
+                    <button class="btn btn_add">
+                        <i class="fas fa-check"></i>
                     </button>
-                </div>
-                <div class="ul_wrapper">
+                </label>
+                    <ul class="todo_list">
+                        <!--    
+                        <li class=task>
+                            <p class="task_text">${inp}</p>
+                            <div class="controls">
+                                <button class="btn btn_check">
+                                    <i class="fas fa-check"></i>
+                                </button>
+                                <button class="btn btn_times">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </li>
+                        -->
+                    </ul>
+            </div>
+            <div class="border_between"></div>
+            <div class="ul_wrapper">
+                <div class="done_tasks">
+                    <div class="done_header">
+                        <h4>Done tasks:</h4>
+                        <button class="btn_clear_done">
+                            clear
+                        </button>
+                    </div>
                     <ul class="todo_list_done">
-                    
+                        
                     </ul>
                 </div>
-            </div>
+            </div>  
         </div>
 
         <!--!TimerSection-->
@@ -78,14 +83,20 @@
                 <h1 class="timer_heading">
                     Timer
                 </h1>
+                <label for="focusTime">
+                    Enter length of focusing time
+                </label>
                 <input id="focusTime" type="number" min="10" max="60" placeholder="..length of focusing time">
+                <label for="restTime">
+                    Enter length of resting time
+                </label>
                 <input id="restTime" type="number" min="10" max="60" placeholder="..length of resting time">
                 <button class="btn_submit">
                     submit
                 </button>
             </div>
-            <div class="clock">
-                <div class="clock_header">
+            <div class="timer">
+                <div class="timer_header">
                     <button class="btn_back">
                         <i class="fas fa-arrow-left"></i>
                     </button>

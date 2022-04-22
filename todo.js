@@ -98,15 +98,7 @@ const populateDoneTask = input => {
     taskNode.classList.add('task')
     taskNode.dataset.key = counterNegative()
     const skeleton = `                
-        <p class="task_text_done">${input}</p>
-        <div class="controls">
-        <button class="btn btn_check">
-            <i class="fas fa-check"></i>
-        </button>
-        <button class="btn btn_times">
-            <i class="fas fa-times"></i>
-        </button>
-        </div>`
+        <p class="task_text_done">${input}</p>`
     taskNode.innerHTML = skeleton
     tasksContainerDone.append(taskNode)
     localStorage.setItem(counterNegative(),inpVal)
@@ -189,15 +181,7 @@ const repopulateDoneTasks = () => {
         taskNodeRe.classList.add('task')
         taskNodeRe.dataset.key = store[i]
         const skeleton = `                
-        <p class="task_text_done">${value}</p>
-        <div class="controls">
-            <button class="btn btn_check">
-            <i class="fas fa-check"></i>
-            </button>
-            <button class="btn btn_times">
-            <i class="fas fa-times"></i>
-            </button>
-        </div>`
+        <p class="task_text_done">${value}</p>`
         taskNodeRe.innerHTML = skeleton
         //console.log(taskNodeRe)
         tasksContainerDone.append(taskNodeRe)
