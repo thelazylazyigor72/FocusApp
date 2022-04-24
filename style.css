@@ -332,6 +332,7 @@ body {
 }
 
 .todo_section .ul_wrapper .done_tasks .task {
+  color: #172019b7;
   position: relative;
 }
 

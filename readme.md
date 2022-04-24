@@ -4,7 +4,7 @@ This right here — learning frontend project. I've seen a lot of articles that 
 ---
 ### So what u will see here:
 ### Desctop app that meant to boost ur productivity w/ ToDoList, PomodoroTimer and QuoteGenerator. 
-### Check it here: 
+### Check it here: ----
 ---
 Also it's important to mention some things: 
 - I purposely avided to add responsiveness cuz I think it's unnecessarily within idea of this project, and it's kinda obvious that on mobiles it would be very uncomfortable to use
