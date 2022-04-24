@@ -1,4 +1,4 @@
-//!Preps 4 work
+//!Load my own starting files (theyre still demo, but kinda useful)
 @import './resetStyles.scss';
 @import './patterns.scss';
 
@@ -12,7 +12,7 @@ $cmn-border: 3px solid $main-dark-clr;
 $transition: 0.2s ease-in;
 $scale: scale(1.05);
 
-//!LocalPatterns
+//!Local patterns to use specifically on this project
 %glassmorhism {
     /* From https://css.glass */
     background: rgba(229,252,194,0.13);
@@ -22,6 +22,7 @@ $scale: scale(1.05);
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.11);
 }
+
 %buttons {
     font-family: $basic-font;
     text-transform: uppercase;
@@ -34,6 +35,7 @@ $scale: scale(1.05);
         transform: $scale;
     }
 }
+
 %icons {
     font-size: 1.5rem;
     color: $main-dark-clr;
@@ -42,6 +44,7 @@ $scale: scale(1.05);
         transform: $scale;
     }
 }
+
 %input {
     padding-left: 1.5rem;
     background-color: transparent;
@@ -50,6 +53,7 @@ $scale: scale(1.05);
     height: 1.5rem;
     transition: $transition;
 }
+
 %placeholder {
     font-size: 0.75rem;
     color: $main-dark-clr;
@@ -62,9 +66,11 @@ $scale: scale(1.05);
     max-width: 1401px;
     @extend%container;
 }
+
 html {
     font-size: 18px;
 }
+
 body {
     height: 100vh;
     font-family: $basic-font;
@@ -74,9 +80,7 @@ body {
     @extend%backgroundImage;
 }
 
-//!-----------------------------------------------------------------------
-
-//!quote_section
+//!Quote section
 .quote_section {
     position: absolute;
     bottom: 5%;
@@ -102,7 +106,8 @@ body {
         @extend%buttons;
     }
 }
-//-----------------------------------------------------
+
+//! To!Do section
 .todo_section {
     position: absolute;
     top: 5%;
@@ -216,8 +221,7 @@ body {
     margin: 1rem 0;
 }
 
-//!-------------------------------------------------------------------------------------------
-
+//!Timer section
 .timer_section {
     position: absolute;
     top: 7%;
@@ -312,4 +316,3 @@ body {
         }
     }
 }
-

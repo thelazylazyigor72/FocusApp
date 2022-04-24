@@ -151,6 +151,7 @@ function actualTimeBeforeTarget (target, data, act = (new Date)) {
         if (diff >= 0) {
         timeContainer.innerHTML = new Date(diff).toLocaleTimeString("en-US", {minute: '2-digit', second: '2-digit'});
         } else {
+            alert('Time is out!')
             clearInterval(interval)
             makeCLickable(data)
         }
@@ -165,15 +166,13 @@ function actualTimeLeft(target,data,act) {
 function makeCLickable(data) {
     switch (data) {
         case 'focusSession':
-            //alert('Включаю отдых')
             startRest.disabled = false
             break;
         case 'restSession':
-            //alert('Включаю работу')
             startFocus.disabled = false
             break;
         default:
-            alert('Ошибочка')
+            alert('Can not make it clickable')
             break;
     }
 }
@@ -182,15 +181,13 @@ function makeCLickable(data) {
 function makeUnclickable(data) {
     switch (data) {
         case 'focusSession':
-            //alert('Выключаю отдых')
             startRest.disabled = true
             break;
         case 'restSession':
-            //alert('Выключаю работу')
             startFocus.disabled = true
             break;
         default:
-            alert('Ошибочка')
+            alert('Can not make it unclickable')
             break;
     }
 }
