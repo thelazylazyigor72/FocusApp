@@ -1,26 +1,29 @@
 //!Load my own starting files (theyre still demo, but kinda useful)
 @import './resetStyles.scss';
 @import './patterns.scss';
+@import './resp.scss';
 
 //!Variables
-$main-dark-clr: #172019;
-$supporing-light-clr: #e5fcc2;
-$body-bg-color: #45ADA8;
-$body-bg-img: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Ccircle stroke='%23E5FCC2' vector-effect='non-scaling-stroke' id='a' fill='none' stroke-width='3.5' r='315'/%3E%3Cuse id='f' href='%23a' stroke-dasharray='100 100 100 9999'/%3E%3Cuse id='b' href='%23a' stroke-dasharray='250 250 250 250 250 9999'/%3E%3Cuse id='e' href='%23a' stroke-dasharray='1000 500 1000 500 9999'/%3E%3Cuse id='g' href='%23a' stroke-dasharray='1500 9999'/%3E%3Cuse id='h' href='%23a' stroke-dasharray='2000 500 500 9999'/%3E%3Cuse id='j' href='%23a' stroke-dasharray='800 800 800 800 800 9999'/%3E%3Cuse id='k' href='%23a' stroke-dasharray='1200 1200 1200 1200 1200 9999'/%3E%3Cuse id='l' href='%23a' stroke-dasharray='1600 1600 1600 1600 1600 9999'/%3E%3C/defs%3E%3Cg transform='translate(1000 750)' %3E%3Cg transform='rotate(360 0 0)' %3E%3Ccircle fill='%23E5FCC2' r='10'/%3E%3Cg transform='rotate(-222 0 0)'%3E%3Cuse href='%23f' transform='scale(.1) rotate(50 0 0)' /%3E%3Cuse href='%23f' transform='scale(.2) rotate(100 0 0)' /%3E%3Cuse href='%23f' transform='scale(.3) rotate(150 0 0)' /%3E%3C/g%3E%3Cg transform='rotate(-30.6 0 0)'%3E%3Cuse href='%23b' transform='scale(.4) rotate(200 0 0)' /%3E%3Cuse href='%23z' transform='scale(.5) rotate(250 0 0)' /%3E%3C/g%3E%3Cg id='z' transform='rotate(99.9 0 0)'%3E%3Cg transform='rotate(225 0 0)'%3E%3Cuse href='%23b'/%3E%3Cuse href='%23b' transform='scale(1.2) rotate(90 0 0)' /%3E%3Cuse href='%23b' transform='scale(1.4) rotate(60 0 0)' /%3E%3Cuse href='%23e' transform='scale(1.6) rotate(120 0 0)' /%3E%3Cuse href='%23e' transform='scale(1.8) rotate(30 0 0)' /%3E%3C/g%3E%3C/g%3E%3Cg id='y' transform='rotate(137.7 0 0)'%3E%3Cg transform='rotate(135 0 0)'%3E%3Cuse href='%23e' transform='scale(1.1) rotate(20 0 0)' /%3E%3Cuse href='%23g' transform='scale(1.3) rotate(-40 0 0)' /%3E%3Cuse href='%23g' transform='scale(1.5) rotate(60 0 0)' /%3E%3Cuse href='%23h' transform='scale(1.7) rotate(-80 0 0)' /%3E%3Cuse href='%23j' transform='scale(1.9) rotate(100 0 0)' /%3E%3C/g%3E%3C/g%3E%3Cg transform='rotate(-270 0 0)'%3E%3Cg transform='rotate(-99.9 0 0)'%3E%3Cg transform='rotate(-183.6 0 0)'%3E%3Cuse href='%23h' transform='scale(2) rotate(60 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.1) rotate(120 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.3) rotate(180 0 0)'/%3E%3Cuse href='%23h' transform='scale(2.4) rotate(240 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.5) rotate(300 0 0)'/%3E%3C/g%3E%3Cuse href='%23y' transform='scale(2) rotate(180 0 0)' /%3E%3Cuse href='%23j' transform='scale(2.7)'/%3E%3Cuse href='%23j' transform='scale(2.8) rotate(45 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.9) rotate(90 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.1) rotate(135 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.2) rotate(180 0 0)'/%3E%3C/g%3E%3Cuse href='%23k' transform='scale(3.3) rotate(225 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.5) rotate(270 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.6) rotate(315 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.7)'/%3E%3Cuse href='%23k' transform='scale(3.9) rotate(75 0 0)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+$main-dark-clr: #000;
+$supporingggg-light-clr: #fba92c;
+$supporing-light-clr: #ffd089;
+$body-bg-color: #000;
+$text-clr: #ffd089;
+$body-bg-img: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Ccircle stroke='%23FBA92C' vector-effect='non-scaling-stroke' id='a' fill='none' stroke-width='3.2' r='315'/%3E%3Cuse id='f' href='%23a' stroke-dasharray='100 100 100 9999'/%3E%3Cuse id='b' href='%23a' stroke-dasharray='250 250 250 250 250 9999'/%3E%3Cuse id='e' href='%23a' stroke-dasharray='1000 500 1000 500 9999'/%3E%3Cuse id='g' href='%23a' stroke-dasharray='1500 9999'/%3E%3Cuse id='h' href='%23a' stroke-dasharray='2000 500 500 9999'/%3E%3Cuse id='j' href='%23a' stroke-dasharray='800 800 800 800 800 9999'/%3E%3Cuse id='k' href='%23a' stroke-dasharray='1200 1200 1200 1200 1200 9999'/%3E%3Cuse id='l' href='%23a' stroke-dasharray='1600 1600 1600 1600 1600 9999'/%3E%3C/defs%3E%3Cg transform='translate(1000 750)' stroke-opacity='0.14'%3E%3Cg transform='rotate(82.8 0 0)' %3E%3Ccircle fill='%23FBA92C' fill-opacity='0.14' r='10'/%3E%3Cg transform='rotate(-114 0 0)'%3E%3Cuse href='%23f' transform='scale(.1) rotate(50 0 0)' /%3E%3Cuse href='%23f' transform='scale(.2) rotate(100 0 0)' /%3E%3Cuse href='%23f' transform='scale(.3) rotate(150 0 0)' /%3E%3C/g%3E%3Cg transform='rotate(-13.8 0 0)'%3E%3Cuse href='%23b' transform='scale(.4) rotate(200 0 0)' /%3E%3Cuse href='%23z' transform='scale(.5) rotate(250 0 0)' /%3E%3C/g%3E%3Cg id='z' transform='rotate(51.3 0 0)'%3E%3Cg transform='rotate(51.75 0 0)'%3E%3Cuse href='%23b'/%3E%3Cuse href='%23b' transform='scale(1.2) rotate(90 0 0)' /%3E%3Cuse href='%23b' transform='scale(1.4) rotate(60 0 0)' /%3E%3Cuse href='%23e' transform='scale(1.6) rotate(120 0 0)' /%3E%3Cuse href='%23e' transform='scale(1.8) rotate(30 0 0)' /%3E%3C/g%3E%3C/g%3E%3Cg id='y' transform='rotate(62.1 0 0)'%3E%3Cg transform='rotate(31.05 0 0)'%3E%3Cuse href='%23e' transform='scale(1.1) rotate(20 0 0)' /%3E%3Cuse href='%23g' transform='scale(1.3) rotate(-40 0 0)' /%3E%3Cuse href='%23g' transform='scale(1.5) rotate(60 0 0)' /%3E%3Cuse href='%23h' transform='scale(1.7) rotate(-80 0 0)' /%3E%3Cuse href='%23j' transform='scale(1.9) rotate(100 0 0)' /%3E%3C/g%3E%3C/g%3E%3Cg transform='rotate(-62.1 0 0)'%3E%3Cg transform='rotate(-51.3 0 0)'%3E%3Cg transform='rotate(-82.8 0 0)'%3E%3Cuse href='%23h' transform='scale(2) rotate(60 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.1) rotate(120 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.3) rotate(180 0 0)'/%3E%3Cuse href='%23h' transform='scale(2.4) rotate(240 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.5) rotate(300 0 0)'/%3E%3C/g%3E%3Cuse href='%23y' transform='scale(2) rotate(180 0 0)' /%3E%3Cuse href='%23j' transform='scale(2.7)'/%3E%3Cuse href='%23j' transform='scale(2.8) rotate(45 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.9) rotate(90 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.1) rotate(135 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.2) rotate(180 0 0)'/%3E%3C/g%3E%3Cuse href='%23k' transform='scale(3.3) rotate(225 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.5) rotate(270 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.6) rotate(315 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.7)'/%3E%3Cuse href='%23k' transform='scale(3.9) rotate(75 0 0)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 $basic-font: 'Syncopate', sans-serif;
-$cmn-border: 3px solid $main-dark-clr;
+$cmn-border: 3px solid $supporing-light-clr;
 $transition: 0.2s ease-in;
 $scale: scale(1.05);
 
 //!Local patterns to use specifically on this project
 %glassmorhism {
     /* From https://css.glass */
-    background: rgba(229,252,194,0.13);
+    background: rgba(77, 0, 0, 0.026);
     border-radius: 1rem;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px #ffd08946;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.11);
+    border: 0.2px solid #ffd08946;
 }
 
 %buttons {
@@ -31,6 +34,7 @@ $scale: scale(1.05);
     background: transparent;
     border: $cmn-border;
     transition: $transition;
+    color: $supporing-light-clr;
     &:hover {
         transform: $scale;
     }
@@ -38,7 +42,7 @@ $scale: scale(1.05);
 
 %icons {
     font-size: 1.5rem;
-    color: $main-dark-clr;
+    color: $supporing-light-clr;
     transition: $transition;
     &:hover {
         transform: $scale;
@@ -51,12 +55,13 @@ $scale: scale(1.05);
     border: $cmn-border;
     border-radius: 0.7rem;
     height: 1.5rem;
+    color: $supporing-light-clr;
     transition: $transition;
 }
 
 %placeholder {
     font-size: 0.75rem;
-    color: $main-dark-clr;
+    color: $supporing-light-clr;
     font-family: $basic-font;
 }
 
@@ -65,35 +70,106 @@ $scale: scale(1.05);
     //border: 1px dotted red;
     max-width: 1401px;
     @extend%container;
+    @include xs {
+        max-width: 390px;
+        //border: 1px solid red;
+    };
+    @include sm {
+        max-width: 600px;
+        padding: 0 0.5rem;
+        //border: 1px solid rgb(94, 255, 0);
+    };
+    @include md {
+        max-width: 800px;
+        padding: 0 1rem;
+        //border: 1px solid blue;
+    };
+    @include lg {
+        max-width: 1024px;
+        padding: 0;
+        //border: 1px solid yellow;
+    };
+    @include xl {
+        max-width: 1250px;
+        //border: 1px solid orange;
+    };
+    @include xxl {
+        max-width: 1400px;
+        //border: 1px solid purple;
+    };
 }
 
 html {
     font-size: 18px;
+    @include xs {
+        font-size: 15.5px;
+    };
+    @include sm {
+        font-size: 16.5px;
+    };
+    @include md {
+        font-size: 17px;
+    };
+    @include lg {
+        font-size: 17.5px;
+    };
+    @include xl {
+        font-size: 18px;
+    };
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     font-family: $basic-font;
     @include flexbase(row,center,center);
     background-color: $body-bg-color;
     background-image: $body-bg-img;
     @extend%backgroundImage;
+    @include xs {
+        @include flexbase(column,center,center);
+        min-height: 100vh
+    };
+    @include xl {
+        @include flexbase(row,center,center);
+        min-height: 100vh
+    };
 }
 
 //!Quote section
 .quote_section {
-    position: absolute;
-    bottom: 5%;
-    right: 25%;
+    position: static;
     @extend%glassmorhism;
     @include flexbase(column,center,center);
-    height: 17rem;
-    width: 27rem;
+    width: 100%;
+    height: fit-content;
     padding: 1rem;
-    color: $main-dark-clr;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    color: $supporing-light-clr;
+    @include lg {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+    };
+    @include xl {
+        position: absolute;
+        bottom: 5%;
+        right: 15%;
+        height: 17rem;
+        width: 27rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    };
+    @include xxl {
+        right: 25%;
+    };
     .quote_heading {
         @extend%heading;
         margin-bottom: 2rem;
+        @include xs {
+            text-align: center
+        };
     }
     .quote, .quote_author {
         margin-bottom: 1rem;
@@ -109,15 +185,27 @@ body {
 
 //! To!Do section
 .todo_section {
-    position: absolute;
-    top: 5%;
-    left: 5%;
+    position: static;
     @include flexbase(column,center,center);
     @extend%glassmorhism;
-    height: 30rem;
-    width: 25rem;
+    width: 100%;
+    height: fit-content;
     padding: 1rem;
-    color: $main-dark-clr;
+    margin-bottom: 2rem;
+    color: $supporing-light-clr;
+    @include lg {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    };
+    @include xl {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        height: 30rem;
+        width: 25rem;
+        margin-bottom: 0;
+    };
     .todo_header {
         @extend%heading;
         margin-bottom: 3rem;
@@ -151,6 +239,9 @@ body {
                 width: 90%;
                 &::placeholder {
                     @extend%placeholder;
+                }
+                &:active {
+                    color: $supporing-light-clr;
                 }
             }
             .btn_add {
@@ -200,7 +291,7 @@ body {
                 margin-bottom: 1rem;
             }
             .task {
-                color: #172019b7;
+                color: $supporing-light-clr;
                 position: relative;
                 &::after {
                     content: " ";
@@ -217,26 +308,37 @@ body {
 .border_between {
     width: 100%;
     height: 0.1rem;
-    background-color: $main-dark-clr;
+    background-color: $supporing-light-clr;;
     border-radius: 1rem;
     margin: 1rem 0;
 }
 
 //!Timer section
 .timer_section {
-    position: absolute;
-    top: 7%;
-    right: 7%;
+    position: static;
     @extend%glassmorhism;
-    height: 15rem;
-    width: 25rem;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 5rem;
     @include flexbase(row,center,center);
-    color: $main-dark-clr;
+    color: $supporing-light-clr;
+    @include lg {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 5rem;
+    };
+    @include xl {
+        position: absolute;
+        top: 7%;
+        right: 7%;
+        height: 15rem;
+        width: 25rem;
+        margin-bottom: 0;
+    };
     .timer_form {
         width: 100%;
         padding: 1rem;
         @include flexbase(column,center,center);
-        //display: none;
         .timer_heading {
             @extend%heading;
             margin-bottom: 1rem;
@@ -287,12 +389,14 @@ body {
                 input[type=checkbox] + label:before {
                     font-family: FontAwesome;
                     display: inline-block;
+                    color: $supporing-light-clr; 
                 }
                 input[type=checkbox] + label:before {
                     content: "\f28b"; 
                     font-size: 1.5rem; 
                     font-weight: 100; 
                     cursor: pointer; 
+                    color: $supporing-light-clr; 
                 }
                 input[type=checkbox]:checked + label:before { 
                     content: "\f28b"; 
@@ -303,6 +407,7 @@ body {
             }
         }
         .time_container {
+            color: $supporing-light-clr;
             font-size: 3rem;
             font-family: 'Press Start 2P', cursive;
             margin-bottom: 2rem;
@@ -314,6 +419,19 @@ body {
                 @extend%btn_ni;
                 @extend%buttons;
             }
+        }
+    }
+}
+.time_container_indication {
+    animation-name: timeout;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    @keyframes timeout {
+        from {text-shadow: 0 4px 30px #ffd08946;};
+        to {
+            text-shadow: 0 10px 30px #fba92c;
         }
     }
 }

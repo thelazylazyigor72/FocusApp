@@ -52,6 +52,7 @@ let pauseInterval;
 goBack.addEventListener('click', () => {
     timerForm.style.display = 'flex'
     clockDiv.style.display = 'none'
+    sessionStorage.clear()
 })
 
 //!submit button
@@ -64,6 +65,7 @@ submit.addEventListener('click', () => {
         inputPause.value = ''
         timerForm.style.display = 'none'
         clockDiv.style.display = 'flex'
+        saveRequiredData(focusSession,restSession,targetTime,dataId)
     } else {
         alert('Ты что-то не ввел походу')
     }
@@ -77,6 +79,7 @@ startFocus.addEventListener('click', (e) => {
     getEnds(focusSession)
     saveRequiredData(focusSession,restSession,targetTime,dataId)
     actualTimeLeft(targetTime,dataId)
+    timeContainer.classList.remove('time_container_indication')
 })
 
 //!startBreak button
@@ -86,6 +89,7 @@ startRest.addEventListener('click', (e) => {
     getEnds(restSession)
     saveRequiredData(focusSession,restSession,targetTime,dataId)
     actualTimeLeft(targetTime,dataId)
+    timeContainer.classList.remove('time_container_indication')
 })
 
 //!If pauseSwithcer active or not we do something
@@ -150,8 +154,10 @@ function actualTimeBeforeTarget (target, data, act = (new Date)) {
         let diff = target.getTime() - act;
         if (diff >= 0) {
         timeContainer.innerHTML = new Date(diff).toLocaleTimeString("en-US", {minute: '2-digit', second: '2-digit'});
+        } else if (diff = 0) {
+            timeContainer.classList.add('time_container_indication')
         } else {
-            alert('Time is out!')
+            timeContainer.classList.add('time_container_indication')
             clearInterval(interval)
             makeCLickable(data)
         }
@@ -172,7 +178,6 @@ function makeCLickable(data) {
             startFocus.disabled = false
             break;
         default:
-            alert('Can not make it clickable')
             break;
     }
 }
@@ -187,7 +192,6 @@ function makeUnclickable(data) {
             startFocus.disabled = true
             break;
         default:
-            alert('Can not make it unclickable')
             break;
     }
 }
