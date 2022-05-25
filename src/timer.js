@@ -1,5 +1,4 @@
 //?ПОЛУЧЕНИЕ ЭЛЕМЕНТОВ-------------------------------------------------------------------
-
 //!get focus length input
 const inputSession = document.querySelector('#focusTime')
 //!get pause length input
@@ -23,10 +22,7 @@ const startRest = document.querySelector('.btn_start_rest')
 //!get stop button
 const stop = document.querySelector('.btn_stop')
 
-
-
 //?ОБЪЯВЛЕНИЕ ПЕРЕМЕННЫХ-----------------------------------------------------------------
-
 //!variable to store current time
 let startTime;
 //!variable to store target time
@@ -47,7 +43,6 @@ let secondsOfPause = 0;
 let pauseInterval;
 
 //? EVENTS-----------------------------------------------------------------------------------------------
-
 //!goback button
 goBack.addEventListener('click', () => {
     timerForm.style.display = 'flex'
@@ -74,22 +69,12 @@ submit.addEventListener('click', () => {
 
 //!startSession button
 startFocus.addEventListener('click', (e) => {
-    dataId = e.currentTarget.dataset.id
-    makeUnclickable(dataId)
-    getEnds(focusSession)
-    saveRequiredData(focusSession,restSession,targetTime,dataId)
-    actualTimeLeft(targetTime,dataId)
-    timeContainer.classList.remove('time_container_indication')
+    startSession(focusSession,e)
 })
 
 //!startBreak button
 startRest.addEventListener('click', (e) => {
-    dataId = e.currentTarget.dataset.id
-    makeUnclickable(dataId)
-    getEnds(restSession)
-    saveRequiredData(focusSession,restSession,targetTime,dataId)
-    actualTimeLeft(targetTime,dataId)
-    timeContainer.classList.remove('time_container_indication')
+    startSession(restSession,e)
 })
 
 //!If pauseSwithcer active or not we do something
@@ -124,8 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
         timerForm.style.display = 'none'
         clockDiv.style.display = 'flex'
         assignRequiredData()
-        makeUnclickable(obj.id)
-        actualTimeLeft(targetTime,obj.id)
+        makeUnclickable(obj.dataID)
+        actualTimeLeft(targetTime,obj.dataID)
     } else {
         timerForm.style.display = 'flex'
         clockDiv.style.display = 'none'
@@ -133,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 //?FUNCTIONS----------------------------------------------------------------
-
 //!Function that makes current time point and target time point
 function getEnds(period, act = (new Date)) {
     startTime = act;
@@ -165,7 +149,7 @@ function actualTimeBeforeTarget (target, data, act = (new Date)) {
 
 //!Wrapper function for interval
 function actualTimeLeft(target,data,act) {
-        interval = setInterval(actualTimeBeforeTarget,1000,target,data,act)
+    interval = setInterval(actualTimeBeforeTarget,1000,target,data,act)
 }
 
 //!Function that makes button clickable based on passed data-id
@@ -197,12 +181,12 @@ function makeUnclickable(data) {
 }
 
 //!Function that saves all important parameters as object and make it JSON, so I will be able to store in sessionStorage
-function saveRequiredData(s,pS,tgt,data) {
+function saveRequiredData(focusTime,restTime,targetTime,dataID) {
     obj = {
-        ses: s,
-        paSes: pS,
-        target: tgt,
-        id: data
+        focusTime,
+        restTime,
+        targetTime,
+        dataID
     }
     obj = JSON.stringify(obj)
     sessionStorage.setItem(1,obj)
@@ -212,11 +196,11 @@ function saveRequiredData(s,pS,tgt,data) {
 function assignRequiredData() {
     obj = sessionStorage.getItem(1)
     obj = JSON.parse(obj)
-    obj.target = new Date(obj.target)
-    targetTime = obj.target
-    focusSession = obj.ses
-    restSession = obj.paSes
-    dataId = obj.id
+    obj.targetTime = new Date(obj.targetTime)
+    targetTime = obj.targetTime
+    focusSession = obj.focusTime
+    restSession = obj.restTime
+    dataId = obj.dataID
 }
 
 //!Function that counts how many second pause was
@@ -225,3 +209,14 @@ function wrapPauseCounter() {
         secondsOfPause++;
     },1000)
 }
+
+//!Function to start particular session by clicking button
+const startSession = (session, e) => {
+    dataId = e.currentTarget.dataset.id
+    makeUnclickable(dataId)
+    getEnds(session)
+    saveRequiredData(focusSession,restSession,targetTime,dataId)
+    actualTimeLeft(targetTime,dataId)
+    timeContainer.classList.remove('time_container_indication')
+}
+console.log('hello from timer')

@@ -1,0 +1,53 @@
+/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
+
+//! takin all positive keys (negative - done)
+
+//! takin all positive keys (positive - actual)
+
+//!Callback function for setInterval that displays time left before we get to target every second
+
+//!Class to make tasks
+
+//!Clear only there's no active tasks
+
+//!DOMContentLoaded
+
+//!Function that creates target time point
+
+//!Function that makes button clickable based on passed data-id
+
+//!Function that makes button unclickable based on passed data-id
+
+//!Function that makes current time point and target time point
+
+//!Function that saves all important parameters as object and make it JSON, so I will be able to store in sessionStorage
+
+//!Function to start particular session by clicking button
+
+//!Get object from sessionStorage and reassign exesting(but empty cuz of reload) variables
+
+//!Wrapper function for interval
+
+//!addres of quote api
+
+//!and then assign it to containers
+
+//!function dat doing request and get random quotes data
+
+//!get btn that creates task in list based on input
+
+//!get chech task btn 
+
+//!get collection of just created lists-tasks and go thru it and for each task bring back her btns functionality 
+
+//!get container for author
+
+//!get container for quote
+
+//!get delete task btn
+
+//!get focus length input
+
+//!get input field
+
+//!get pause length input

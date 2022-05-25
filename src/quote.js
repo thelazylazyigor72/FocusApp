@@ -1,3 +1,4 @@
+import './style.scss'
 //!DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
     //loading quote when page load
@@ -31,6 +32,8 @@ const generateQuote = async src => {
     quoteContainer.textContent = data.content
     authorContainer.textContent = data.author
 }
+
+console.log('hello from quote')
 /*old version w/promises
 const generateQuoteProm = (src) => {
     return fetch(src)
